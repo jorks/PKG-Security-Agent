@@ -4,8 +4,12 @@
     "postinstall_action": "none",
     "preserve_xattr": false,
     "name": "SecurityAgent-${version}.pkg",
-    "identifier": "com.github.munki.pkg.SecurityAgent",
+    "identifier": "net.jorks.pkg.SecurityAgent",
     "install_location": "/",
     "version": "1.0",
-    "distribution_style": false
+    "distribution_style": true,
+    "signing_info": {
+        "identity": "Developer ID Installer: SEEK Limited (KS9GBQ67G7)",
+        "timestamp": true
+    }
 }
