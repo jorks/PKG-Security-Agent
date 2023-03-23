@@ -1,1 +1,6 @@
 .	40755	0/0
+./private	40755	0/0
+./private/tmp	40755	0/0
+./private/tmp/Security-Agent-Install	40755	0/0
+./private/tmp/Security-Agent-Install/Security Agent-1.1.pkg	100664	0/0	523385	2895624418
+./private/tmp/Security-Agent-Install/install_options.xml	100664	0/0	812	3954270848

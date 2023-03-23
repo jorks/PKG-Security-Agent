@@ -1,0 +1,19 @@
+#!/bin/sh
+## postinstall
+
+pathToScript=$0
+pathToPackage=$1
+targetLocation=$2
+targetVolume=$3
+
+PACKAGE_NAME=$( /usr/bin/find /private/tmp/Security-Agent-Install -name "*.pkg" )
+
+echo "Found PACKAGE_NAME: ${PACKAGE_NAME}"
+
+/usr/sbin/installer -pkg "${PACKAGE_NAME}" -applyChoiceChangesXML "/private/tmp/Security-Agent-Install/install_options.xml" -target /
+
+/bin/rm -rf /private/tmp/Security-Agent-Install
+
+
+exit 0		## Success
+exit 1		## Failure

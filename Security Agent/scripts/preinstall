@@ -1,0 +1,28 @@
+#!/bin/sh
+## preinstall
+
+pathToScript=$0
+pathToPackage=$1
+targetLocation=$2
+targetVolume=$3
+
+cat << EOF > /Library/Preferences/com.SecurityAgent.settings.plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SecurityAgentTenant</key>
+	<string>9cbbc4ea-d6bd-497c-b72c-5ed7e075462f</string>
+</dict>
+</plist>
+EOF
+
+/usr/sbin/chown root:wheel /Library/Preferences/com.SecurityAgent.settings.plist
+/bin/chmod 644 /Library/Preferences/com.SecurityAgent.settings.plist
+
+# Kill the Preference caching daemon to prevent it from overwriting any changes
+/usr/bin/killall cfprefsd
+
+
+exit 0		## Success
+exit 1		## Failure
