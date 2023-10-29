@@ -4,7 +4,7 @@ This package is source controlled and managed with git and GitHub Workflows.
 
 ### Package Notes
 
-This package as lots of painful requirements:
+This package has lots of painful requirements:
 
 - Installer needs a choices XML
 - You need to manually create a tenant plist
